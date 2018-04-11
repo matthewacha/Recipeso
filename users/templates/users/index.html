@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE:html>
+<html>
+  <head>
+    <title>Sign up</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'users/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}">
+	
+  </head>
+  
+  <body>
+    <nav class = "navbar navbar-inverse">
+	  <div class = "container-fluid">
+	    <div class = "navbar-header">
+	      <div class = "navbar-brand">Recipeso</div>
+	    </div>
+		<ul class="nav navbar-nav navbar-right">
+    <li><a href="{% url 'login'%}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+    <div class = "container" id = "container">
+	{% if messages %}
+		  <div class="alert alert-warning alert-dismissible" role="alert">
+			{{messages}}
+		  </div>
+	  {% endif %}
+	    <div class = "panel panel-default" id = "panel">
+            <div class = "intro-header" id = "intro-header"><h1>Recipeso</h1></div>
+	            <form id = "form" action = "{% url 'index'%}" method = "POST">
+				{% csrf_token %}
+	                <div class = "form-group">
+					<label id = "label">email</label><br>
+						{{form.email}}<br>
+						<label id = "label">Password</label><br>
+						{{form.password}}
+					</div>
+		            <div class="form-group">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+	            </form>
+	    </div>
+	</div>
+  </body>
+
+</html>

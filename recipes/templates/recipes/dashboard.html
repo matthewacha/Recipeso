@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Profile</title>
+	<link rel = "stylesheet" type = "text/css" href = "bootstrap.css">
+	<link rel = "stylesheet" type = "text/css" href = "font-awesome.min.css">
+	<link rel="stylesheet" type ="text/css" href = "styles.css">
+	<!--link rel="javascript" type ="text/js" href="bootstrap.min.js"-->
+  </head>
+  <body>
+  
+  <!--navigation bar-->
+		  <nav class = "navbar navbar-inverse">
+		    <div class = "container-fluid">
+	          <div class = "navbar-header">
+	            <div class = "navbar-brand">Recipeso</div>
+	          </div>
+		      <ul class="nav navbar-nav navbar-right">
+	          <li><a href={`/login`}><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
+	          </ul>
+	        </div>
+	      </nav>
+		
+		  	
+	<div class = "row home">
+	  <div class = "col-lg-2 home">
+        <div class = "side-panel home">
+		  <div class= "profile-pic home">
+	<img src="prof_pic.jpg" class="img-circle" alt="No image" width="150" height="150"/>
+		    <h5>user name</h5>
+		  </div>
+		  
+		  <div class = "panel panel-default home">
+		    <div class = "panel-heading home"><a href="#" class="btn" role="button">User Profile</a></div>
+			<div class = "panel-body home"><a href="#" class="btn" role="button">Posts</a></div>
+			<div class = "panel-heading home"><a href="#" class="btn" role="button">Settings</a></div>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  
+	  <div class = "col-lg-10 home">
+	    <div class = "post-bar home">
+		  <div class ="panel home">
+		  
+			<div>
+		    <div class = "panel-body home">
+			  <form action="#">
+                <div class="input-group " id = "comment home">
+                  <textarea class="form-control home" rows="2" id="comment"  name="recipe_description" placeholder="Input post..." required></textarea>
+                  <div class="input-group-btn home" >
+                      <button class="btn btn-default home" id ="post" type="submit"><h6>Post</h6>
+                      </button>
+                  </div>
+                </div>
+          </form>
+			</div>
+			</div>
+			
+
+		    <div class = "panel-body home" id = "post-display home">
+			  <h2>After a highly competitive selection process, we're pleased to inform you that the admissions committee has 
+			  decided to move you onto the next stage on your journey towards becoming an Andela Developer: </h2>
+			    <div className="edit-del">
+				<div class="input-group-btn home">
+                    <button class="btn btn-default home" type="submit">
+                      <h6>Edit</h6>
+                    </button>
+              
+                    <button class="btn btn-default home" id = "del-btn home" type="submit">
+                      <h6>Delete</h6>
+                    </button>
+                  
+				   <h6>views <span class="badge home">5</span></h6>
+				  </div>
+
+			    </div>
+			</div>
+            
+			<div class = "panel-body home" id = "post-display home">
+			  <h2>After a highly competitive selection process, we're pleased to inform you that the admissions committee has 
+			  decided to move you onto the next stage on your journey towards becoming an Andela Developer: </h2>
+			    <div class="edit-del home">
+				<div class="input-group-btn home">
+                    <button class="btn btn-default home" type="submit">
+                      <h6>Edit</h6>
+                    </button>
+              
+                    <button class="btn btn-default home" id = "del-btn home" type="submit">
+                      <h6>Delete</h6>
+                    </button>
+                  
+				   <h6>views <span class="badge home">5</span></h6>
+				  </div>
+
+			    </div>
+			</div>
+		  
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>
